@@ -15,3 +15,39 @@
 
 
 // B) call the different methods with appropriate values and then console.log boots to see what happened to the property values.
+
+
+
+class Cat {
+    constructor(name, breed) {
+        this.species = 'cat';
+        this.breed = breed;
+        this.name = name;
+        this.tiredness = 50;
+        this.hunger = 50;
+        this.loneliness = 50;
+        this.happiness = 50;
+    }
+
+    sleep = (hours) => {
+        this.tiredness -= 5 * hours
+    }
+    
+    eat = (grams) => {
+        this.hunger -= (1 / 5) * grams
+    }
+    
+    play = (minutes) => {
+    this.loneliness -= minutes * 3;
+    }
+
+}
+
+
+const boots = new Cat('Boots', 'Siamese')
+
+boots.sleep(100);
+boots.eat(100);
+boots.play(100);
+
+console.log(boots);
